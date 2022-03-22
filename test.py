@@ -1,3 +1,4 @@
+import OpenGL
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
@@ -55,13 +56,16 @@ def showScreen():
 
     glutSwapBuffers()
 
-#---Section 3---    
-glutInit()
-glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE) # Set the display mode to be colored
-glutInitWindowSize(width, height)   # Set the w and h of your window
-glutInitWindowPosition(200, 200)   # Set the position at which this windows should appear
-wind = glutCreateWindow("OpenGL Coding Practice") # Set a window title
-glutDisplayFunc(showScreen)
-glutIdleFunc(showScreen) # Keeps the window open
-print("ALL success!")
-glutMainLoop()  # Keeps the above created window displaying/running in a loop
+#---Section 3---  
+def main():  
+    glutInit()
+    glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE) # Set the display mode to be colored
+    glutInitWindowSize(width, height)   # Set the w and h of your window
+    glutInitWindowPosition(200, 200)   # Set the position at which this windows should appear
+    wind = glutCreateWindow("OpenGL Coding Practice") # Set a window title
+    glutDisplayFunc(showScreen)
+    glutIdleFunc(showScreen) # Keeps the window open
+    print("ALL success!")
+    glutMainLoop()  # Keeps the above created window displaying/running in a loop
+
+main()

@@ -9,7 +9,7 @@ def refresh(width, height):
     glViewport(0, 0, width, height)                                     # specify viewport parameters
     glMatrixMode(GL_PROJECTION)                                         # set mode to projection transformation
     glLoadIdentity()                                                    # reset transf matrix to an identity
-    glOrtho(0.0, width, 0.0, height, 0.0, 1.0)                          # specify orthogonal projection view volume
+    glOrtho(-0.5*width, 0.5*width, -0.5*height, 0.5*height, 0.0, 1.0)   # specify orthogonal projection view volume
     glMatrixMode(GL_MODELVIEW)                                          # set mode to modelview (geometric+view transf)
     glLoadIdentity()                                                    # reset transf matrix to an identity
 
@@ -17,14 +17,42 @@ def draw():                                                             # draw()
     glClearColor(1.0, 1.0, 0.0, 1.0)                                    # set display window color to yellow
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)                  # clear display window
     glLoadIdentity()                                                    # reset transformations
-    refresh(width, height)                                            # reset transforms
+    refresh(width, height)                                              # reset transforms
+    
+    # draw +x and +y axes
+    glColor3f(0.0, 0.0, 0.0)
+    glBegin(GL_LINES)
+    glVertex2f(0.0, 0.0)                                                # origin
+    glVertex2f(0.5*width, 0.0)
+    glVertex2f(0.0, 0.0)
+    glVertex2f(0.0, 0.5*height)
+    glEnd()
 
-    glColor3f(0.2, 0.5, 0.4)                                            # set object color
     # draw triangles
+    glColor3f(0.2, 0.5, 0.4)                                            # set object color
     glBegin(GL_TRIANGLES)
-    glVertex2f(100.0, 210.0)                                            # v0
-    glVertex2f(300.0, 210.0)                                            # v1
-    glVertex2f(300.0, 310.0)                                            # v2
+    glVertex2f(-50.0, -100.0)                                           # v0
+    glVertex2f(50.0, -100.0)                                            # v1
+    glVertex2f(50.0, 0.0)                                               # v2
+    glEnd()
+
+    # rotate and draw another triangle in blue
+    glRotatef(90.0, 0.0, 0.0, 1.0)
+    glColor(0.0, 0.0, 1.0)
+    glBegin(GL_TRIANGLES)
+    glVertex2f(-50.0, -100.0)                                           # v0
+    glVertex2f(50.0, -100.0)                                            # v1
+    glVertex2f(50.0, 0.0)                                               # v2
+    glEnd()
+
+    # scale and draw a triangle in red
+    glLoadIdentity()
+    glScalef(1.0, -2.0, 1.0)
+    glColor(1.0, 0.0, 0.0)
+    glBegin(GL_TRIANGLES)
+    glVertex2f(-50.0, -100.0)                                           # v0
+    glVertex2f(50.0, -100.0)                                            # v1
+    glVertex2f(50.0, 0.0)                                               # v2
     glEnd()
 
     glutSwapBuffers()                                                   # import for double-buffering

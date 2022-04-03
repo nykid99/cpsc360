@@ -26,7 +26,7 @@
 ### Run test code
 1. **Download code**
   - Code -> Download Zip
-  - Alternatively, ***if you are familiar with git/github***, you may also fork and then clone the code from: https://github.com/trudiQ/cpsc360.git (**pull only**)
+  - Alternatively, ***if you are familiar with git/github***, you may also clone the code from: https://github.com/trudiQ/cpsc360.git (**pull only**)
 2. **Open VScode**
   - Install Python extention 
   - Open folder 'cpsc360'

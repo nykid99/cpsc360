@@ -1,5 +1,6 @@
 # CPSC 360
 ## PyOpenGL Setup
+### Installation
 1. **Download software**:
   - Visual Studio Code (*if not installed already*)
     - https://code.visualstudio.com/download
@@ -22,3 +23,12 @@
   - type `conda create --name cpsc360 python=3.8`
   - type `activate cpsc360`
   - type `pip install PyOpenGL PyOpenGL_accelerate`
+### Run test code
+1. **Download code**
+  - Code -> Download Zip
+  - Alternatively, ***if you are familiar with git/github***, you may also fork and then clone the code from: https://github.com/trudiQ/cpsc360.git (**pull only**)
+2. **Open VScode**
+  - Install Python extention 
+  - Open folder 'cpsc360'
+  - Select Interpreter: Python 3.8.x ('cpcs360') *# the conda environment you just created*
+3. **Run python file 'hellopyopengl.py'**

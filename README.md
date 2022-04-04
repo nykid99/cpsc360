@@ -6,8 +6,8 @@
     - https://code.visualstudio.com/download
   - Anaconda (*if not installed already*)
     - https://www.anaconda.com/products/distribution
-  - (For Windows only) xxx
-  - (For Windows only) xxx
+  - (For Windows only) PyOpenGL-3.1.6 and PyOpenGL_accelerate-3.1.6
+    - https://drive.google.com/drive/folders/1-Lr94q2Yfg1NXiNH2ZB9mOMY72GVXAI3?usp=sharing 
 2. **Install software** (to default location)
   - Visual Studio Code
   - Anaconda
@@ -16,19 +16,22 @@
   - Open Anaconda Promopt Command Window
   - type `conda create --name cpsc360 python=3.8`
   - type `activate cpsc360`
-  - install xxx 
-  - install xxx
+  - navigate to the folder where you downloaded PyOpenGL-3.1.6 and PyOpenGL_accelerate-3.1.6
+    - For example, `cd Downloads\cpsc360`
+  - type `pip install PyOpenGL-3.1.6-cp38-cp38-win_amd64.whl --force-reinstall` 
+  - type `pip install PyOpenGL_accelerate-3.1.6-cp38-cp38-win_amd64.whl --force-reinstall`
 #### MacOS
   - Open Terminal
   - type `conda create --name cpsc360 python=3.8`
   - type `activate cpsc360`
   - type `pip install PyOpenGL PyOpenGL_accelerate`
-### Run test code
+### Run the helloword code
 1. **Download code**
-  - Code -> Download Zip
+  - Under this github repo, go to Code -> Download Zip
   - Alternatively, ***if you are familiar with git/github***, you may also clone the code from: https://github.com/trudiQ/cpsc360.git (**pull only**)
+    - if you want to save and upload your changes, ***fork it to your own repo before changing anything***
 2. **Open VScode**
   - Install Python extention 
-  - Open folder 'cpsc360'
-  - Select Interpreter: Python 3.8.x ('cpcs360') *# the conda environment you just created*
+  - Open code folder 'cpsc360'
+  - Select Interpreter: Python 3.8.x ('cpsc360') *# 'cpsc360' is the conda environment you just created*
 3. **Run python file 'hellopyopengl.py'**

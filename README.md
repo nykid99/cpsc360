@@ -23,7 +23,7 @@
 #### MacOS
   - Open Terminal
   - type `conda create --name cpsc360 python=3.8`
-  - type `activate cpsc360`
+  - type `conda activate cpsc360`
   - type `pip install PyOpenGL PyOpenGL_accelerate`
   - *Note: if you got errors when running the above command, try the following*
     - `pip3 install PyOpenGL`

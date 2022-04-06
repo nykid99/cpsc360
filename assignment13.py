@@ -19,6 +19,28 @@ def question1():
     print("assignment 13.1")
 
 def question2():
+    # draw the rectangle
+    glColor3f(0.2, 0.5, 0.4)
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL)                               # color can also be specified for each vertex
+    glBegin(GL_POLYGON)
+    glVertex3f(150.0, 50.0, 0.0)                                            # v0
+    glVertex3f(350.0, 50.0, 0.0)                                            # v1
+    glVertex3f(350.0, 450.0, 0.0)                                           # v2
+    glVertex3f(150.0, 450.0, 0.0)                                           # v3
+    glEnd()
+
+    # draw the vertices
+    glColor3f(0.0, 0.0, 0.0)
+    glPointSize(10.0)
+    glBegin(GL_POINTS)
+    glVertex3f(150.0, 50.0, 0.0)                                            # v0
+    glVertex3f(350.0, 50.0, 0.0)                                            # v1
+    glVertex3f(350.0, 450.0, 0.0)                                           # v2
+    glVertex3f(150.0, 450.0, 0.0)                                           # v3
+    glEnd()
+
+    # TODO triangulation with 8 triangles
+
 
     print("assignment 13.2")
     

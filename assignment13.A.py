@@ -15,34 +15,14 @@ def refresh(width, height):
     glLoadIdentity()                                                        # reset transf matrix to an identity
 
 def question1():
+    #TODO
 
-    print("assignment 13.1")
+    print("assignment 13.A-1")
 
 def question2():
-    # draw the rectangle
-    glColor3f(0.2, 0.5, 0.4)
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL)                               # color can also be specified for each vertex
-    glBegin(GL_POLYGON)
-    glVertex3f(150.0, 50.0, 0.0)                                            # v0
-    glVertex3f(350.0, 50.0, 0.0)                                            # v1
-    glVertex3f(350.0, 450.0, 0.0)                                           # v2
-    glVertex3f(150.0, 450.0, 0.0)                                           # v3
-    glEnd()
+    #TODO
 
-    # draw the vertices
-    glColor3f(0.0, 0.0, 0.0)
-    glPointSize(10.0)
-    glBegin(GL_POINTS)
-    glVertex3f(150.0, 50.0, 0.0)                                            # v0
-    glVertex3f(350.0, 50.0, 0.0)                                            # v1
-    glVertex3f(350.0, 450.0, 0.0)                                           # v2
-    glVertex3f(150.0, 450.0, 0.0)                                           # v3
-    glEnd()
-
-    # TODO triangulation with 8 triangles
-
-
-    print("assignment 13.2")
+    print("assignment 13.A-2")
     
 def draw():                                                                 # This is the drawing function defined by you and called all the time
     glClearColor(1.0, 1.0, 0.0, 1.0)                                        # set background RGBA color 
@@ -53,11 +33,11 @@ def draw():                                                                 # Th
     # To show the result for one quesiton at a time, 
     #    comment out the function of the other question
 
-    # assignment 13.1
+    # assignment 13.A-1
     # TODO write your code in the function below
     question1()
 
-    # assignment 13.2
+    # assignment 13.A-2
     # TODO write your code in the function below
     #question2()
 
@@ -68,7 +48,7 @@ def main():
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_ALPHA | GLUT_DEPTH)  # set display mode of display-window
     glutInitWindowPosition(0, 0)                                            # set top-left display-window position
     glutInitWindowSize(width, height)                                       # set display-window size
-    window = glutCreateWindow("cpsc 360 - Trudi Qi")                        # create window with title
+    window = glutCreateWindow("cpsc360:A13.A - TYPE YOUR NAME HERE")        # create window with title
     glutDisplayFunc(draw)                                                   # display graphic content and wait
     glutMainLoop()                                                          # must be called at last; display graphics and put program into infinite loop
 

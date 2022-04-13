@@ -39,7 +39,7 @@ def question1():
     glEnd()
 
 
-    print("assignment 13.1")
+    print("assignment 13.A-1")
 
 def question2():
     # # draw the rectangle
@@ -102,14 +102,14 @@ def draw():                                                                 # Th
     # To show the result for one quesiton at a time, 
     #    comment out the function of the other question
 
-    # assignment 13.1
+    # assignment 13.A-1
     # TODO write your code in the function below
 
 
     
     # question1()
 
-    # assignment 13.2
+    # assignment 13.A-2
     # TODO write your code in the function below
 
     question2()
